@@ -22,3 +22,35 @@ Here you can see my react code and learn from it. let's start !!
 - HTTPs.
 - Tree Shaking - Remove unuse code.
 - Different devlopment and production Bundles.
+
+# planing for our App
+
+App Componenets
+Header - logo - nav items
+
+    body
+    - search
+    - Restorant Container
+    - Restorant Card
+       - img, rating, name of restaurant, cuisine , delevary time.
+
+    footer
+    - copyright
+    - links
+    - Address
+    - contact
+
+# two types of Export / Import
+
+- 1 default Export / Import
+
+  - export default Component;
+  - import Component from file_path
+
+- 2 named Export / Import
+
+  both in one component file
+
+  - export const Component => CDN_URL = " "
+  - export const Component => LOGO_URL =" "
+  - import {Component} from "file_path"; => Component put it inside { }(breacket)
