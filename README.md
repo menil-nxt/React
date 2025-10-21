@@ -54,3 +54,9 @@ Header - logo - nav items
   - export const Component => CDN_URL = " "
   - export const Component => LOGO_URL =" "
   - import {Component} from "file_path"; => Component put it inside { }(breacket)
+
+# React Hooks
+
+- (Normal Java Script Utility Functions -> writen by Facebook -> where thi all hooks -> inside nodemodule-React all of this come.)
+- 1 - useState() - gives you ->  superPwerful state variable in react
+- 2 - useEffect() - 

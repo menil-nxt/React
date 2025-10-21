@@ -41,6 +41,13 @@
     width:50%;
     border-radius: 15px;
 }
+.filter-btn{
+    padding: 10px;
+    border-radius: 15px;
+    background: orangered;
+    color: #fff;
+    cursor: pointer;
+}
 
 .res-card {
     width: 300px;

@@ -1,4 +1,4 @@
-const resList = [
+let resList = [
   {
     info: {
       id: "1059457",
@@ -9,7 +9,7 @@ const resList = [
       areaName: "Crystal Mall",
       costForTwo: "₹400 for two",
       cuisines: ["Pizzas", "Pastas", "Italian", "Desserts", "Beverages"],
-      avgRating: 4,
+      avgRating: 3.9,
       parentId: "3534",
       avgRatingString: "4.0",
       totalRatingsString: "197",
@@ -83,7 +83,7 @@ const resList = [
       areaName: "150 Feet Ring Road",
       costForTwo: "₹400 for two",
       cuisines: ["Fast Food", "Pizzas", "Burgers", "Snacks", "Beverages"],
-      avgRating: 4.6,
+      avgRating: 4.1,
       veg: true,
       parentId: "449726",
       avgRatingString: "4.6",
@@ -494,7 +494,7 @@ const resList = [
         "Pizzas",
         "Biryani",
       ],
-      avgRating: 4.4,
+      avgRating: 3.5,
       veg: true,
       parentId: "143896",
       avgRatingString: "4.4",
