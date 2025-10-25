@@ -6,6 +6,11 @@ const Body = () => {
   // local state variable -> super powerful rreact variable
   const [topRestaurant, setTopRestaurant] = useState(resList);
 
+  // const arr = [topRestaurant , setTopRestaurant] you can pass this arr into below -> const arr = useState(resList);
+
+  // const arr[0] = topRestaurant;
+  // const arr[1] = setTopRestaurant;
+
   // Normal Java-Script variable
   // const listOfRestorant = [];
 
