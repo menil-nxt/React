@@ -57,6 +57,6 @@ Header - logo - nav items
 
 # React Hooks
 
-- (Normal Java Script Utility Functions -> writen by Facebook -> where thi all hooks -> inside nodemodule-React all of this come.)
-- 1 - useState() - gives you ->  superPwerful state variable in react
-- 2 - useEffect() - 
+- (Normal Java Script Utility Functions -> writen by Facebook -> where this all hooks -> inside nodemodule-React all of this come.)
+- 1 - useState() - gives you -> superPwerful state variable in react
+- 2 - useEffect() -

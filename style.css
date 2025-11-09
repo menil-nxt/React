@@ -57,8 +57,14 @@
     background:#fff;
     border-radius: 15px;
     border: 1px solid orangered;
-
+    transition: 0.7s;
+    box-shadow: 7px 10px 3px rgb(173, 154, 144);
 }
+
+.res-card:hover{
+    box-shadow: 10px 7px 7px rgb(110, 104, 100);
+}
+
 .res-card h3{
     margin: 10px;
 }
