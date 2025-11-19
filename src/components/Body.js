@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const Body = () => {
   // local state variable -> super powerful rreact variable
-  const [topRestaurant, setTopRestaurant] = useState();
+  const [topRestaurant, setTopRestaurant] = useState([]);
 
   // const arr = [topRestaurant , setTopRestaurant] you can pass this arr into below -> const arr = useState(resList);
 
@@ -15,17 +15,25 @@ const Body = () => {
   // const listOfRestorant = [];
 
   useEffect(() => {
-    featchData();
+    fatchData();
   }, []); // useEffect hook is comes with 1.( ) => { callback function }, and 2.[dependancy of Array]
 
-  const featchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.2926506&lng=70.7168469&collection=80355&tags=layout_ux4&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
-    );
+  const fatchData = async () => {
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.0240649&lng=72.60021069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      );
+      const json = await data.json();
 
-    const json = await data.json();
-    console.log(json);
-    setTopRestaurant(json?.data?.cards?.card?.card?.info);
+      let topRestaurant = json?.data?.cards?.find((item) =>
+        item?.card?.card?.id?.includes("restaurant_grid")
+      )?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+      console.log(topRestaurant);
+      setTopRestaurant(topRestaurant);
+    } catch (err) {
+      console.error(err.messages);
+    }
   };
 
   return (
