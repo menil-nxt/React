@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
-
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   // local state variable -> super powerful rreact variable
@@ -25,6 +25,8 @@ const Body = () => {
       );
       const json = await data.json();
 
+      // Optional chaining
+      // Get data from API and store it into variable
       let topRestaurant = json?.data?.cards?.find((item) =>
         item?.card?.card?.id?.includes("restaurant_grid")
       )?.card?.card?.gridElements?.infoWithStyle?.restaurants;
@@ -35,6 +37,10 @@ const Body = () => {
       console.error(err.messages);
     }
   };
+
+  if (topRestaurant.length === 0) {
+    return <Shimmer />;
+  }
 
   return (
     <div className="body">

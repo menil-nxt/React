@@ -15,6 +15,7 @@
     font-size: 18px;
     list-style-type: none;
     padding-right: 50px;
+    align-content: center;
 }
 
 .nav-items li{
@@ -100,4 +101,38 @@
 .footer{
     background: orangered;
     padding: 10px;
+}
+
+/* Shimmer UI */
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card{
+    margin:70px;
+}
+
+.shimmer-img{
+    width: 190px;
+    height: 200px;
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.shimmer-resname{
+    margin-top: 20px;
+    width: 150px;
+    height: 13px;
+    background: #f0f0f0;
+    border-radius: 20px;
+}
+
+.shimmer-info{
+    margin-top: 10px;
+    width: 160px;
+    height: 13px;
+    background: #f0f0f0;
+    border-radius: 20px;
 }
