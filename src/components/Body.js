@@ -38,11 +38,10 @@ const Body = () => {
     }
   };
 
-  if (topRestaurant.length === 0) {
-    return <Shimmer />;
-  }
-
-  return (
+  // Conditional Rendring
+  return topRestaurant.length === 0 ? ( // used ternary operator
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="search">
         <input className="search-input" type="text" placeholder="Search" />
@@ -52,13 +51,13 @@ const Body = () => {
         className="filter-btn"
         onClick={() => {
           const filteredList = topRestaurant?.filter(
-            (res) => res.info.avgRating > 4
+            (res) => res.info.avgRating > 4.5
           );
           console.log(filteredList);
           setTopRestaurant(filteredList);
         }}
       >
-        Top Restro
+        Top Reated Restaurant
       </button>
 
       <div className="res-container">

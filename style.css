@@ -29,6 +29,17 @@
     cursor: pointer;
 }
 
+.Login-btn{
+    width: 80px;
+    height: 40px;
+    color: orangered;
+    font-size: 17px;
+    margin-top: 15px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
 
 /* Body */
 .search{
