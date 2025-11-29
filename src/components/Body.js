@@ -5,6 +5,9 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   // local state variable -> super powerful rreact variable
   const [topRestaurant, setTopRestaurant] = useState([]);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+
+  const [searchText, setSearchText] = useState("");
 
   // const arr = [topRestaurant , setTopRestaurant] you can pass this arr into below -> const arr = useState(resList);
 
@@ -14,6 +17,8 @@ const Body = () => {
   // Normal Java-Script variable
   // const listOfRestorant = [];
 
+  // Whenever state variable update , react triggers a reconciliation cycle (re-renders the component)
+  console.log("body rendered");
   useEffect(() => {
     fatchData();
   }, []); // useEffect hook is comes with 1.( ) => { callback function }, and 2.[dependancy of Array]
@@ -27,12 +32,13 @@ const Body = () => {
 
       // Optional chaining
       // Get data from API and store it into variable
-      let topRestaurant = json?.data?.cards?.find((item) =>
+      let resList = json?.data?.cards?.find((item) =>
         item?.card?.card?.id?.includes("restaurant_grid")
       )?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
-      console.log(topRestaurant);
-      setTopRestaurant(topRestaurant);
+      console.log(resList);
+      setTopRestaurant(resList);
+      setFilteredRestaurant(resList);
     } catch (err) {
       console.error(err.messages);
     }
@@ -43,25 +49,47 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="search">
-        <input className="search-input" type="text" placeholder="Search" />
-        <button className="filter-btn">🔍 Search</button>
+      <div className="filtered">
+        <div className="search">
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Search"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              // Filtered the restraunt cards an Update the UI
+              // for that we need (SerchText) also
+              console.log(searchText);
+              const filterData = topRestaurant.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setFilteredRestaurant(filterData);
+            }}
+          >
+            🔍 Search
+          </button>
+        </div>
       </div>
-      <button
-        className="filter-btn"
-        onClick={() => {
-          const filteredList = topRestaurant?.filter(
-            (res) => res.info.avgRating > 4.5
-          );
-          console.log(filteredList);
-          setTopRestaurant(filteredList);
-        }}
-      >
-        Top Reated Restaurant
-      </button>
-
+      <div className="filter">
+        <button
+          className="filter-btn"
+          onClick={() => {
+            const filteredList = topRestaurant?.filter(
+              (res) => res.info.avgRating > 4.4
+            );
+            setFilteredRestaurant(filteredList);
+          }}
+        >
+          Top Reated Restaurant
+        </button>
+      </div>
       <div className="res-container">
-        {topRestaurant?.map((restaurant) => (
+        {filteredRestaurant?.map((restaurant) => (
           <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
         ))}
         {/* function data(restaurant) {

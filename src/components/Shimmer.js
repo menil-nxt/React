@@ -5,41 +5,49 @@ const Shimmer = () => {
         <div className="shimmer-img"></div>
         <div className="shimmer-resname"></div>
         <div className="shimmer-info"></div>
+        <div className="shimmer-order"></div>
       </div>
       <div className="shimmer-card">
         <div className="shimmer-img"></div>
         <div className="shimmer-resname"></div>
         <div className="shimmer-info"></div>
+        <div className="shimmer-order"></div>
       </div>
       <div className="shimmer-card">
         <div className="shimmer-img"></div>
         <div className="shimmer-resname"></div>
         <div className="shimmer-info"></div>
+        <div className="shimmer-order"></div>
       </div>
       <div className="shimmer-card">
         <div className="shimmer-img"></div>
         <div className="shimmer-resname"></div>
         <div className="shimmer-info"></div>
+        <div className="shimmer-order"></div>
       </div>
       <div className="shimmer-card">
         <div className="shimmer-img"></div>
         <div className="shimmer-resname"></div>
         <div className="shimmer-info"></div>
+        <div className="shimmer-order"></div>
       </div>
       <div className="shimmer-card">
         <div className="shimmer-img"></div>
         <div className="shimmer-resname"></div>
         <div className="shimmer-info"></div>
+        <div className="shimmer-order"></div>
       </div>
       <div className="shimmer-card">
         <div className="shimmer-img"></div>
         <div className="shimmer-resname"></div>
         <div className="shimmer-info"></div>
+        <div className="shimmer-order"></div>
       </div>
       <div className="shimmer-card">
         <div className="shimmer-img"></div>
         <div className="shimmer-resname"></div>
         <div className="shimmer-info"></div>
+        <div className="shimmer-order"></div>
       </div>
     </div>
   );
