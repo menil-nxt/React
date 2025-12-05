@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
-  // local state variable -> super powerful rreact variable
+  // local state variable -> super powerful react variable
   const [topRestaurant, setTopRestaurant] = useState([]);
-  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]); // make a copy of this topRestaurant variable
+  // after searching anything topRestaurant(data) is not updated but this filteredRestaurant(data) is changed that's why topRestaurant(data) is static it's naver changes
+  // we are allways change this filteredRestaurant(data)
 
   const [searchText, setSearchText] = useState("");
 
@@ -38,7 +40,7 @@ const Body = () => {
 
       console.log(resList);
       setTopRestaurant(resList);
-      setFilteredRestaurant(resList);
+      setFilteredRestaurant(resList); // copy of topRestaurant
     } catch (err) {
       console.error(err.messages);
     }
@@ -57,18 +59,18 @@ const Body = () => {
             placeholder="Search"
             value={searchText}
             onChange={(e) => {
-              setSearchText(e.target.value);
+              setSearchText(e.target.value); // target the search value
             }}
           />
           <button
             onClick={() => {
               // Filtered the restraunt cards an Update the UI
               // for that we need (SerchText) also
-              console.log(searchText);
+              console.log(searchText); // each and every latter this whole body componente is rendered -> but only changes appeer when is needed
               const filterData = topRestaurant.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
-              setFilteredRestaurant(filterData);
+              setFilteredRestaurant(filterData); //filtering this filteredRestaurant variable with new searchText(filterData)
             }}
           >
             🔍 Search
@@ -82,12 +84,13 @@ const Body = () => {
             const filteredList = topRestaurant?.filter(
               (res) => res.info.avgRating > 4.4
             );
-            setFilteredRestaurant(filteredList);
+            setFilteredRestaurant(filteredList); // Changes Applicable for only new filteredList(data)
           }}
         >
           Top Reated Restaurant
         </button>
       </div>
+      {/* every time new or old filteredRestaurant is maped */}
       <div className="res-container">
         {filteredRestaurant?.map((restaurant) => (
           <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
