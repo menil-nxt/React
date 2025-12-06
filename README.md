@@ -58,5 +58,37 @@ Header - logo - nav items
 # React Hooks
 
 - (Normal Java Script Utility Functions -> writen by Facebook -> where this all hooks -> inside nodemodule-React all of this come.)
-- 1 - useState() - gives you -> superPwerful state variable in react
-- 2 - useEffect() -
+
+- 1 - useState() - gives you -> superPowerful state variable in react
+
+  - syntex :- const [variable name, setVariable name] = useState (initial value);
+  - useState() variable is local powerfull variable in react
+  - usestate() variable declare in array and in array -> 1. variable name 2. for chaning this variable value useState() is give one functionfor that as second value of array -> setVariable name
+  - with setVariable name you can change vaue of your state variable.
+
+    Limitation of useState() hook
+
+    - local state variable -> super powerful react variable
+    - Naver create useState() variable inside if...else... (conditional statement)
+    - Naver create useState() variable inside For Loop
+    - Naver create useState() variable inside Function
+
+# How we can fetch data from backend
+
+- for that 2 Approches are there
+
+  1. Load and render => Load -> API -> Render
+  2. Render first and than fetch later => Load -> Render -> API -> RE-Render
+
+  Note :- we have use here 2 Approch
+
+  - for that we use => useEffect() hook
+
+- 2 - useEffect() - is containe two thing
+  1. call-back function => this call-back function is called after whole component is rendered (mendetory)
+  2. array of dependency => changes the behaviour of it's render (optional)
+  - 1. if no dependency array -> useEffect() is called on every component render
+  - 2. if dependency array is empty = [] -> useEffect() is called one initial render(just once)
+  - 3. if dependency is their -> useEffect is called -> every time that dependency is updated
+
+  - syntex :- useEffect( () => {} , [ ] )
