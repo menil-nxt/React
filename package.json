@@ -2,9 +2,9 @@
   "name": "react",
   "version": "1.0.0",
   "description": "Hi! My name is Menil Jotaniya",
-   "scripts": {
-    "start" : "parcel index.html",
-    "build" : "parcel build index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -28,7 +28,9 @@
   },
   "dependencies": {
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router": "^6.30.2",
+    "react-router-dom": "^6.30.2"
   },
   "browserslist": [
     "last 2 virson"

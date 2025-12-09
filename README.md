@@ -85,8 +85,10 @@ Header - logo - nav items
   - for that we use => useEffect() hook
 
 - 2 - useEffect() - is containe two thing
+
   1. call-back function => this call-back function is called after whole component is rendered (mendetory)
   2. array of dependency => changes the behaviour of it's render (optional)
+
   - 1. if no dependency array -> useEffect() is called on every component render
   - 2. if dependency array is empty = [] -> useEffect() is called one initial render(just once)
   - 3. if dependency is their -> useEffect is called -> every time that dependency is updated

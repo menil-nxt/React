@@ -4,7 +4,9 @@ import Shimmer from "./Shimmer";
 
 const Body = () => {
   // local state variable -> super powerful react variable
+  // Original
   const [topRestaurant, setTopRestaurant] = useState([]);
+  // Copy
   const [filteredRestaurant, setFilteredRestaurant] = useState([]); // make a copy of this topRestaurant variable
   // after searching anything topRestaurant(data) is not updated but this filteredRestaurant(data) is changed that's why topRestaurant(data) is static it's naver changes
   // we are allways change this filteredRestaurant(data)
