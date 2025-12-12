@@ -94,3 +94,16 @@ Header - logo - nav items
   - 3. if dependency is their -> useEffect is called -> every time that dependency is updated
 
   - syntex :- useEffect( () => {} , [ ] )
+
+# React-router-dom
+
+- use this both for routing any pages into your website
+  1. createBrowserRouter
+  2. RouterProvider
+
+# Roting in webApps
+
+- Two types of Routing in webapps
+  1. Client-side routing :- when you click on about us link that only componet is load not whole page
+  - so it's faster than server-side routing
+  2. Server-side routing :- make network call and the page that about us page is coming from server and show it to user
