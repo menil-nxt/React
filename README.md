@@ -107,3 +107,4 @@ Header - logo - nav items
   1. Client-side routing :- when you click on about us link that only componet is load not whole page
   - so it's faster than server-side routing
   2. Server-side routing :- make network call and the page that about us page is coming from server and show it to user
+ 

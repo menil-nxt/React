@@ -24,10 +24,10 @@ const Body = () => {
   // Whenever state variable update , react triggers a reconciliation cycle (re-renders the component)
   console.log("body rendered");
   useEffect(() => {
-    fatchData();
+    fetchData();
   }, []); // useEffect hook is comes with 1.( ) => { callback function }, and 2.[dependancy of Array]
 
-  const fatchData = async () => {
+  const fetchData = async () => {
     try {
       const data = await fetch(
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.0240649&lng=72.60021069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"

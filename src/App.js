@@ -4,9 +4,10 @@ import Header from "./components/Header.js";
 import Body from "./components/Body.js";
 import Footer from "./components/Footer.js";
 import About from "./components/About.js";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Contact from "./components/Contact.js";
 import Error from "./components/Error.js";
+import Contact from "./components/Contact.js";
+import RestaurantMenu from "./components/RestaurantMenu.js";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
@@ -34,6 +35,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/restaurant/:resID",
+        element: <RestaurantMenu />,
       },
     ],
     errorElement: <Error />,
