@@ -25,8 +25,9 @@
 .nav-items li{
     padding: 15px;
     margin: 10px;
-    
+    text-decoration: none;
 }
+
 
 .nav-items li:hover{
     color: rgb(243, 98, 7);
@@ -91,7 +92,7 @@
 }
 
 .res-card:hover{
-    transition: 0.7s 0.5;
+    transition: 0.7s 0.7;
 }
 
 .res-card h3{
@@ -117,7 +118,7 @@
 
 .res-card:hover{
     transform: scale(0.9);
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     cursor: pointer;
     opacity: 1;
 }
@@ -180,16 +181,20 @@
 .menu { 
     box-sizing: border-box;
     border-radius: 20px;
-    border: 1px solid black;
     width: 50%;
     margin-left: 22%;
     margin-bottom: 20px;
     padding: 10px;   
+    list-style: none;
 }
+.menu p{
+    border:0.8px solid rgb(174, 171, 171) ;
+    border-radius: 15px;
+    font-weight: 600;
+    padding: 30px;
+}
+
 /* Shimmer UI - restaurant menu*/
-.menu h1{
-    
-}
 
 
 /* About */
