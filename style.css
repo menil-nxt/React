@@ -201,11 +201,13 @@
 
 .about-cart {
     box-sizing: border-box;
-    width:100%;
-    margin-left: 20px;
+    width: 90%;
+    margin-left: 75px;
     padding: 20px;
-    background: rgb(255, 255, 255);
+    background: rgb(245, 240, 240);
     border-radius: 20px;
+    box-shadow: 10px 12px 5px rgb(154, 151, 151);
+    margin-bottom: 50px;
 }
 .about-heading{
     padding-left: 20px;
@@ -214,7 +216,9 @@
     justify-content: center;
 }
 .about-cart h2 {
-    color: aqua;
+    color: rgb(35, 56, 68);
+    margin-left: 27px;
+    text-shadow: 1.3px 1px 0.1px #010101;
 }
 
 .about-cart h3 {

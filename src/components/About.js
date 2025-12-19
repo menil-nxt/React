@@ -1,3 +1,6 @@
+import { User } from "./User";
+import UserClass from "./UserClass";
+
 const About = () => {
   return (
     <div className="about-cart">
@@ -7,6 +10,11 @@ const About = () => {
         fresh to your doorstep. We believe great food brings people together,
         and our mission is to make every bite memorable.
       </h3>
+      <User
+        name="Menil jotaniya (Owner Functional-based)"
+        Locality="Bangluru.."
+      />
+      <UserClass name="Menil jotaniya (Owner Class-based)" Locality="NewYork" />
       <h3>
         At MJ Food, we combine taste, quality, and convenience. Whether you’re
         craving a quick snack, a hearty meal, or something sweet, we’ve got
