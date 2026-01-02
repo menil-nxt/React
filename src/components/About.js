@@ -10,11 +10,6 @@ const About = () => {
         fresh to your doorstep. We believe great food brings people together,
         and our mission is to make every bite memorable.
       </h3>
-      <User
-        name="Menil jotaniya (Owner Functional-based)"
-        Locality="Bangluru.."
-      />
-      <UserClass name="Menil jotaniya (Owner Class-based)" Locality="NewYork" />
       <h3>
         At MJ Food, we combine taste, quality, and convenience. Whether you’re
         craving a quick snack, a hearty meal, or something sweet, we’ve got
@@ -47,6 +42,11 @@ const About = () => {
         Thank you for choosing MJ Food. We’re excited to be part of your
         everyday meals and special moments.
       </h2>
+      <User
+        name="Menil jotaniya (Owner Functional-based)"
+        Locality="Bangluru.."
+      />
+      <UserClass name="Menil jotaniya (Owner Class-based)" Locality="NewYork" />
     </div>
   );
 };
