@@ -5,39 +5,48 @@ class UserClass extends React.Component {
     super(props);
 
     this.state = {
-      count: 0,
-      first: 1,
+      userInfo: {
+        name: "",
+        location: "",
+        email: "",
+      },
     };
 
-    console.log("child constructor");
+    console.log(this.props.name + "child constructor");
   }
 
-  componentDidMount() {
-    console.log("child component Did mount called");
+  async componentDidMount() {
+    // this.timer = setInterval(() => {
+    //   console.log("MJ food");
+    // }, 1000);
+    const data = await fetch("https://api.github.com/users/menil-nxt");
+    const json = await data.json();
+
+    console.log(json);
+
+    this.setState({
+      userInfo: json,
+    });
+  }
+
+  componentDidUpdate() {
+    console.log("component Did Update");
+  }
+
+  componentWillUnmount() {
+    // clearInterval(this.timer);
+    console.log("component will mount");
   }
 
   render() {
-    const { name, Locality } = this.props;
-    const { count } = this.state;
-
-    console.log("child Render");
+    const { name, location, email, avatar_url } = this.state.userInfo;
+    console.log(this.props.name + "child Render");
     return (
       <div className="user-class">
-        <h1>count :- {count}</h1>
-        <button
-          onClick={() => {
-            // this.state.count = this.state.count + 1;   // Naver UPDATE stare variable Directly
-
-            this.setState({
-              count: this.state.count + 1,
-            });
-            console.log(count);
-          }}
-        >
-          Count Increase
-        </button>
         <h3>Name : {name}</h3>
-        <h3>Locality : {Locality}</h3>
+        <h3>Locality : {location}</h3>
+        <h3>Email - ID : {email}</h3>
+        <img src={avatar_url} />
       </div>
     );
   }
